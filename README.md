@@ -62,3 +62,13 @@ o	Crie um Linked Service para conectar ao Data Lake (use chave de conta ou AAD).
 o	Defina o caminho no Data Lake (exemplo: /projeto-dados-processados/).
 o	Nomeie o arquivo de destino (exemplo: dados_imoveis.json).
 o	Confirme as configurações e clique em OK.
+________________________________________
+6. Agendar a Execução do Pipeline
+1.	Criar um Trigger de Agendamento
+o	No pipeline, clique em Add Trigger → New/Edit.
+o	Crie um novo trigger do tipo Schedule.
+o	Defina a frequência para Diário e escolha o horário de execução.
+o	Clique em OK.
+2.	Publicar as Alterações
+o	Clique em Publish All para salvar e publicar o pipeline.
+________________________________________
