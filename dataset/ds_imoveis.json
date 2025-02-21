@@ -1,0 +1,157 @@
+{
+	"name": "ds_imoveis",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "dados_brutos_imoveis.json",
+				"container": "protestos-dados-brutos"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"anuncio": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "string"
+						},
+						"caracteristicas": {
+							"type": "array"
+						},
+						"area_util": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"tipo_anuncio": {
+							"type": "string"
+						},
+						"tipo_unidade": {
+							"type": "string"
+						},
+						"andar": {
+							"type": "integer"
+						},
+						"vaga": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						},
+						"suites": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						},
+						"banheiros": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						},
+						"tipo_uso": {
+							"type": "string"
+						},
+						"area_total": {
+							"type": "array"
+						},
+						"quartos": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						},
+						"valores": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"iptu": {
+										"type": "string"
+									},
+									"condominio": {
+										"type": "string"
+									},
+									"valor": {
+										"type": "string"
+									},
+									"tipo": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"endereco": {
+							"type": "object",
+							"properties": {
+								"pais": {
+									"type": "string"
+								},
+								"cep": {
+									"type": "string"
+								},
+								"cidade": {
+									"type": "string"
+								},
+								"longitude": {
+									"type": "number"
+								},
+								"latitude": {
+									"type": "number"
+								},
+								"zona": {
+									"type": "string"
+								},
+								"rua": {
+									"type": "string"
+								},
+								"estado": {
+									"type": "string"
+								},
+								"bairro": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"usuario": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"type": "string"
+						},
+						"nome": {
+							"type": "string"
+						}
+					}
+				},
+				"imagens": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string"
+							},
+							"url": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
